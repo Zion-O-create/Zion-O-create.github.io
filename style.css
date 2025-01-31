@@ -1,0 +1,332 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation */
+.nav-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 1.5rem 0;
+}
+
+.nav-header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.8;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 100%;
+}
+
+.hero-image {
+    filter: brightness(100%);
+    background-size: cover;
+    background-position: center;
+}
+
+.clock-image {
+    
+    background-image: url('imgs/watch\ \(1\).jpg');
+    filter: brightness(0.2);
+}
+
+.store-image {
+    
+    background-image: url("imgs/market.png");
+    filter: brightness(0.3);
+
+}
+
+.lifestyle-image {
+   
+    background-image: url("imgs/tray.png");
+    filter: brightness(0.2);
+
+}
+
+.hero-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    max-width: 800px;
+}
+
+.hero-content p {
+    max-width: 800px;
+    margin-bottom: 2rem;
+    font-size: 1.125rem;
+}
+
+.cta-button {
+    
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Services Section */
+.services {
+    background-color: #67000A;
+    padding: 5rem 0;
+}
+
+.services h2 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.service-cardP {
+    position: relative;
+    aspect-ratio: 4/3;
+    background-image: url("imgs/brandING.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.service-cardA {
+    position: relative;
+    aspect-ratio: 4/3;
+    background-image: url("imgs/ADD.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.service-cardS {
+    position: relative;
+    aspect-ratio: 4/3;
+    background-image: url("imgs/image.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.service-cardG {
+    position: relative;
+    aspect-ratio: 4/3;
+    background-image: url("imgs/GRAPHICS.png");
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.service-cardA::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: background-color 0.3s;
+}
+.service-cardG::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: background-color 0.3s;
+}
+.service-cardS::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: background-color 0.3s;
+}
+.service-cardP::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: background-color 0.3s;
+}
+
+.service-cardA:hover::before {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.service-cardG:hover::before {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.service-cardS:hover::before {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.service-cardP:hover::before {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.service-cardA h3 {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    color: white;
+    font-size: 1.5rem;
+}
+.service-cardG h3 {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    color: white;
+    font-size: 1.5rem;
+}
+.service-cardS h3 {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    color: white;
+    font-size: 1.5rem;
+}
+.service-cardP h3 {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* Stats Section */
+.stats {
+    background-color:black;
+    padding: 5rem 0;
+    color: white;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+.stat-card {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.stat-label {
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+    font-size: 0.875rem;
+}
+
+.testimonial {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.testimonial h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.testimonial p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.125rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .stats-grid {
+        gap: 2rem;
+    }
+}
